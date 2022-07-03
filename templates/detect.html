@@ -1,0 +1,42 @@
+{% extends "base0.html" %} {% block content %}
+
+
+
+<div class="center">
+
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+
+      <div >
+        <label for="imageUpload" class="upload-label">
+          <h2>Upload  an Image  to  Detect  Rusts..</h2>  Click here to choose your image
+        </label>
+
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        </div
+
+    </form>
+
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div class="center-button">
+            <button type="button" class="btn btn-info"  " id="btn-predict">Predict!</button>
+        </div>
+
+    </div>
+
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+
+
+
+</div>
+
+{% endblock %}
